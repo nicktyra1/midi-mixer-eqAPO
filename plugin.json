@@ -1,0 +1,27 @@
+{
+  "$schema": "./node_modules/midi-mixer-plugin/plugin.schema.json",
+  "version": "1.0.0",
+  "name": "Foo",
+  "settings": {
+    "url": {
+      "label": "URL",
+      "required": true,
+      "type": "text"
+    },
+    "password": {
+      "label": "Password",
+      "required": true,
+      "type": "password"
+    },
+    "status": {
+      "label": "Status",
+      "type": "status",
+      "fallback": "Not running"
+    },
+    "run": {
+      "label": "Run",
+      "type": "button"
+    }
+  },
+  "author": "Jack Williams"
+}

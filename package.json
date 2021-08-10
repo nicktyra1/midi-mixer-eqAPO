@@ -1,0 +1,49 @@
+{
+  "name": "plugin-template-vite",
+  "prettyName": "Template Plugin (Vite)",
+  "version": "1.0.0",
+  "description": "A template plugin for MIDI Mixer using the Vite bundler.",
+  "main": "https://plugins.vite.midi-mixer.com/",
+  "dev": "https://plugins.vite.midi-mixer.com/",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build && workbox generateSW workbox-config.js",
+    "serve": "vite preview"
+  },
+  "settings": {
+    "url": {
+      "label": "URL",
+      "required": true,
+      "type": "text"
+    },
+    "password": {
+      "label": "Password",
+      "required": true,
+      "type": "password"
+    },
+    "status": {
+      "label": "Status",
+      "type": "status",
+      "fallback": "Not running"
+    },
+    "run": {
+      "label": "Run",
+      "type": "button"
+    }
+  },
+  "author": "Jack Williams",
+  "license": "ISC",
+  "volta": {
+    "node": "14.16.1",
+    "npm": "7.11.1"
+  },
+  "devDependencies": {
+    "rollup-plugin-copy": "^3.4.0",
+    "typescript": "^4.2.4",
+    "vite": "^2.2.3",
+    "workbox-cli": "^6.1.5"
+  },
+  "dependencies": {
+    "midi-mixer-plugin": "^0.1.7"
+  }
+}
